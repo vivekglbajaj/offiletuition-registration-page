@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Tuition Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> -->
+ <style>
+        /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0c0909;
+    color: #333;
+}
+
+.containers {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff876;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Heading */
+.containers p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+   text-decoration-color: #600d0d;
+}
+
+/* Search Box */
+.search-boxs {
+    position: relative;
+    margin: 20px auto;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #f7f7f7;
+}
+
+.search-boxs i {
+    color: #888;
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+.search-boxs input {
+    flex: 1;
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 1rem;
+    color: #333;
+}
+
+.suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #1a075f;
+    border: 1px solid #11aab3;
+    border-radius: 0 0 8px 8px;
+    max-height: 200px;
+    overflow-y: auto;
+    display: none;
+    z-index: 1000;
+}
+
+.suggestions div {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestions div:hover {
+    background-color: #f0f0f0;
+}
+
+/* Tuition Options */
+.options {
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.options label {
+    display: flex;
+    align-items: center;
+    background: #0e0e0e;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.options label:hover {
+    background: #0858c7;
+    border-color: #08be63;
+}
+
+.options input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Next Button */
+.next-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.next-button button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.next-button button:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+}
+
+.next-button button i {
+    font-size: 1.2rem;
+}
+
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <div class="logo">
+                <h2>Home Tuition</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="registration.html">Register</a></li>
+                <li><a href="login.html">Login</a></li>
+                
+
+        
+          
+            <ul>
+                <!-- Add the Registration Links here -->
+           
+            <div class="menu-icon" onclick="toggleNav()">
+                &#9776;
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <section id="home">
+        <div class="container">
+            <h1>Welcome to Offiline Home Tuition Services</h1>
+            <p>Find the best teachers for your child or offer your services as a tutor.</p>
+            <div class="containers">
+
+                <p style="color: #0c0909;">What are you looking for in Home Tuition?</p>
+                <div class="search-boxs">
+                    <i class="fas fa-searchs"></i>
+                    <input type="text" placeholder="Search..." id="search-input" oninput="showSuggestions()">
+                    <div class="suggestions" id="suggestions"></div>
+                </div>
+                <div class="options">
+                    <label>
+                        <span>Class I-V Tuition</span>
+                        <input type="radio" name="tuition">
+                    </label>
+                    <label>
+                        <span>Class 12 Tuition</span>
+                        <input type="radio" name="tuition">
+                    </label>
+                    <label>
+                        <span>Class 10 Tuition</span>
+                        <input type="radio" name="tuition">
+                    </label>
+                    <label>
+                        <span>Class 8 Tuition</span>
+                        <input type="radio" name="tuition">
+                    </label>
+                    <label>
+                        <span>Class 11 Tuition</span>
+                        <input type="radio" name="tuition">
+                    </label>
+                    <label>
+                        <span>Nursery-KG Tuition</span>
+                        <input type="radio" name="tuition">
+                    </label>
+                    <label>
+                        <span>BTech Tuition</span>
+                        <input type="radio" name="tuition">
+                    </label>
+                    <label>
+                        <span>Class 9 Tuition</span>
+                        <input type="radio" name="tuition">
+                    </label>
+                    <label>
+                        <span>Class 6 Tuition</span>
+                        <input type="radio" name="tuition">
+                    </label>
+                    <label>
+                        <span>Engineering Diploma Tuition</span>
+                        <input type="radio" name="tuition">
+                    </label>
+                    <label>
+                        <span>BSc Tuition</span>
+                        <input type="radio" name="tuition">
+                    </label>
+                    <label>
+                        <span>Class 7 Tuition</span>
+                        <input type="radio" name="tuition">
+                    </label>
+                </div>
+                <div class="next-button">
+                    <button>Next <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+        
+            
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>We connect parents with skilled teachers for home tuition. Our platform ensures quality education in the comfort of your home. Whether you're a parent looking for a tutor or a teacher offering your services, we make it easy to find the perfect match.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-item">
+                <div class="service-icon">📚</div>
+                <h3>Teacher Registration</h3>
+                <p>Teachers can easily register on our platform and create their profile for parents to find.</p>
+            </div>
+            <div class="service-item">
+                <div class="service-icon">📍</div>
+                <h3>Find Teachers Nearby</h3>
+                <p>Parents can search for qualified teachers nearby and filter them by subjects and experience.</p>
+            </div>
+            <div class="service-item">
+                <div class="service-icon">💬</div>
+                <h3>Book Demo Classes</h3>
+                <p>Parents can book demo classes with teachers to ensure the right fit before committing long-term.</p>
+            </div>
+            <div class="service-item">
+                <div class="service-icon">⏰</div>
+                <h3>Flexible Scheduling</h3>
+                <p>Our platform allows teachers and parents to set up flexible schedules that suit their needs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback Section -->
+    <section id="feedback">
+        <div class="container">
+            <h2>We Value Your Feedback</h2>
+            <p>Your feedback helps us improve our services. Please share your experience with us below.</p>
+            <form id="feedback-form">
+                <input type="text" id="feedback-name" placeholder="Your Name" required />
+                <input type="email" id="feedback-email" placeholder="Your Email" required />
+                <textarea id="feedback-message" placeholder="Your Feedback" rows="4" required></textarea>
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Have any questions? Reach out to us!</p>
+            <p>Email: info@hometuition.com</p>
+            <p>Phone: +123 456 789</p>
+        </div>
+    </section>
+
+    <!-- Modal for Login and Register -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="login-form" class="form">
+                <h3>Login</h3>
+                <input type="email" placeholder="Email" id="login-email" />
+                <input type="password" placeholder="Password" id="login-password" />
+                <button onclick="submitLogin()">Login</button>
+                <p>Don't have an account? <a href="javascript:void(0);" onclick="toggleForm('register')">Register</a></p>
+            </div>
+            <div id="register-form" class="form" style="display: none;">
+                <h3>Register</h3>
+                <input type="text" placeholder="Full Name" id="register-name" />
+                <input type="email" placeholder="Email" id="register-email" />
+                <input type="password" placeholder="Password" id="register-password" />
+                <label for="role">Select Role:</label>
+                <select id="role" required>
+                    <option value="parent">Parent</option>
+                    <option value="teacher">Teacher</option>
+                </select>
+                <button onclick="submitRegister()">Register</button>
+                <p>Already have an account? <a href="javascript:void(0);" onclick="toggleForm('login')">Login</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Home Tuition Services. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        const options = [
+            "Class I-V Tuition",
+            "Class 12 Tuition",
+            "Class 10 Tuition",
+            "Class 8 Tuition",
+            "Class 11 Tuition",
+            "Nursery-KG Tuition",
+            "BTech Tuition",
+            "Class 9 Tuition",
+            "Class 6 Tuition",
+            "Engineering Diploma Tuition",
+            "BSc Tuition",
+            "Class 7 Tuition"
+        ];
+
+        function showSuggestions() {
+            const input = document.getElementById('search-input').value.toLowerCase();
+            const suggestionsBox = document.getElementById('suggestions');
+            suggestionsBox.innerHTML = '';
+            if (input) {
+                const filteredOptions = options.filter(option => option.toLowerCase().includes(input));
+                filteredOptions.forEach(option => {
+                    const div = document.createElement('div');
+                    div.textContent = option;
+                    div.onclick = () => {
+                        document.getElementById('search-input').value = option;
+                        suggestionsBox.innerHTML = '';
+                        suggestionsBox.style.display = 'none';
+                    };
+                    suggestionsBox.appendChild(div);
+                });
+                suggestionsBox.style.display = 'block';
+            } else {
+                suggestionsBox.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Section Styling */
+section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Registration Form Styling */
+.registration-form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect for form */
+.registration-form:hover {
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading Styling */
+.registration-form h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #0288d1;
+    text-transform: uppercase;
+}
+
+/* Input Fields Styling */
+.registration-form input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+/* Focus effect on input fields */
+.registration-form input:focus {
+    border-color: #0288d1;
+    outline: none;
+}
+
+/* Button Styling */
+.registration-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #0288d1;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect on button */
+.registration-form button:hover {
+    background-color: #01579b;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .registration-form {
+        width: 90%; /* Makes the form responsive on smaller screens */
+    }
+}

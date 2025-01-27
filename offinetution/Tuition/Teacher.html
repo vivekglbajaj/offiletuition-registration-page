@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Registration</title>
+    <link rel="stylesheet" href="regstyles.css">
+</head>
+<body>
+    <section class="form-section">
+        <div class="form-container">
+            <h2>Teacher Registration</h2>
+            <form id="teacher-registration-form" enctype="multipart/form-data">
+                <label for="name">Full Name</label>
+                <input type="text" id="teacher-name" name="name" placeholder="Enter your full name" required />
+
+                <label for="email">Email</label>
+                <input type="email" id="teacher-email" name="email" placeholder="Enter your email" required />
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="teacher-phone" name="phone" placeholder="Enter your phone number" required />
+
+                <label for="subject">Subject Specialization</label>
+                <input type="text" id="teacher-subject" name="subject" placeholder="Enter the subject you teach" required />
+
+                <label for="qualification">Qualifications</label>
+                <input type="text" id="teacher-qualification" name="qualification" placeholder="Enter your qualifications" required />
+
+                <label for="experience">Years of Experience</label>
+                <input type="number" id="teacher-experience" name="experience" placeholder="Enter years of teaching experience" required />
+
+                <label for="bio">Short Bio</label>
+                <textarea id="teacher-bio" name="bio" placeholder="Tell us about yourself and your teaching philosophy" required></textarea>
+
+                <label for="document">Upload Qualification Document</label>
+                <input type="file" id="teacher-document" name="document" accept=".pdf,.docx,.jpg,.png" required />
+
+                <label for="profile-picture">Upload Profile Picture</label>
+                <input type="file" id="teacher-profile-picture" name="profile-picture" accept=".jpg,.jpeg,.png" required />
+
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Link to external JS file -->
+    <script src="teacher.js"></script>
+</body>
+</html>
